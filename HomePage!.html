@@ -76,9 +76,36 @@
 
 <button id="NoBtn" type="button">No</button>
 
+<h1>
+    Will you be attending Halloween with Abby
+
+</h1>
 
 
 </body>
 </html>
 
 
+<script>
+    const noBtn = document.getElementById("NoBtn");
+    let escapes = 0;
+
+    noBtn.addEventListener("mouseover", () => {
+        escapes++;
+
+        if (escapes >= 10) {
+            noBtn.innerText = "Fine, Yes 🎃";
+            noBtn.onclick = () => {
+                window.location.href = "YesPage.html";
+            };
+            return;
+        }
+
+        const maxX = window.innerWidth - noBtn.offsetWidth;
+        const maxY = window.innerHeight - noBtn.offsetHeight;
+
+        noBtn.style.position = "absolute";
+        noBtn.style.left = Math.random() * maxX + "px";
+        noBtn.style.top = Math.random() * maxY + "px";
+    });
+</script>
