@@ -1,24 +1,4 @@
-html
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>l>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,19 +23,45 @@ html
             /* Fallback color if the image fails to load */
             background-color: #cccccc;
 
-        }
-        #yesBtn{
-            font-size: 32px;
-            padding: 20px 50px;
-            border: none;
-            border-radius: 15px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
+        #yesBtn{
+            transform: translateY(250px);
+
+            font-size: 20px;
+            padding: 20px 20px;
+            border: black;
+            /*rounded edges*/
+            border-radius: 10px;
+            background-color: #6045a0;
+            color: white;
+            cursor: pointer;
+            align-items:center;
+            height: 10vh;
+        }
         #yesBtn:hover {
-            background-color: #45a049;
+            background-color: #1c0a4e;
+        }
+        #NoBtn{
+            transform: translateY(250px);
+
+
+            font-size: 20px;
+            padding: 20px 20px;
+            border: Black;
+            /*rounded edges*/
+            border-radius: 10px;
+            background-color: #6045a0;
+            color: white;
+            cursor: pointer;
+            align-items:center;
+            height: 10vh;
+        }
+        #NoBtn:hover {
+            background-color: #1c0a4e;
         }
 
 
@@ -63,7 +69,12 @@ html
 </head>
 <body>
 
-<button type = "button">Yes</button>
+<button id="yesBtn" onclick="window.location.href='YesPage.html'">
+    Yes
+</button>
+
+
+<button id="NoBtn" type="button">No</button>
 
 
 
